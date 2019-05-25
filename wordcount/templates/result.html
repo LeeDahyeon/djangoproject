@@ -1,0 +1,20 @@
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="alert alert-primary" role="alert"><h1 style="font-size: 20px; font-family: 고딕">당신이 입력한 텍스트는 {{total}}로 구성되어 있습니다.</h1></div>
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h3 class="display-4" style="color: blue; font-size:20px"> 입력한 텍스트 : </h3>{{full}}<br><br>
+                <h3 class="display-4" style="color: blue; font-size:20px"> 단어 카운트 : </h3>
+                {% for word, howmany in dictionary%}
+                {{word}} : {{howmany}}
+                <br><br>
+                {%endfor%}
+                <a type="button" class="btn btn-warning" href="{% url 'home'%}"> 다시 하기</a>
+            </div>
+    </div>
+    </div>
+</body>

@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <br>
+    <div class="container">
+            <div class="alert alert-primary" role="alert">
+                  <h1 style="font-family: 고딕; font-size: 30px"> 안녕하세요, 여기서 글자를 세세요! </h1></div>
+
+    <a href="{%url 'about'%}">ABOUT</a>
+
+    <form action="{%url 'result'%}">
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">wordcount</span>
+            </div>
+            <textarea class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="fulltext"></textarea>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-warning" value="Count!">
+    </form>
+    </div>
+</body>
